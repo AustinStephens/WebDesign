@@ -1,0 +1,40 @@
+<script src="script7-4.js"></script>
+<script>
+  startPage();
+  topMenu();
+</script>
+<header>
+  <h2>Sign Up for A Server</h2>
+  <img src="city.jpg">
+</header>
+<article>
+  <form method="post" action="http://www.ieclass.com/jslabs/lab7-4.php">
+    <input type="hidden" name="labcode" value="1098">
+    <table>
+      <tr>
+        <td>First Name:</td><td><input type="text" name="fname" size="20" class="text"></td><td>Last Name:</td><td><input type="text" name="lname" size="20" class="text"></td>
+      </tr>
+      <tr>
+        <td>Address:</td><td><input type="text" name="address" size="20" class="text"></td><td>City:</td><td><input type="text" name="city" size="20" class="text"></td>
+      </tr>
+      <tr>
+        <td>State:</td><td><input type="text" name="state" size="20" class="text"></td><td>Zip Code:</td><td><input type="text" name="zip" size="20" class="text"></td>
+      </tr>
+      <tr>
+        <td>Server Type:</td><td colspan="3"><input type="radio" name="server" value="Shared Server">Shared Server<input type="radio" name="server" value="Dedicated Server">Dedicated Server</td>
+      </tr>
+      <tr>
+        <td>Email Address:</td><td><input type="text" name="email" size="20" class="text"></td><td>Domain Name:</td><td><input type="text" name="domain" size="20" class="text"></td>
+      </tr>
+      <tr>
+        <td>Select Username:</td><td><input type="text" name="username" size="20" class="text"></td><td>Select Password:</td><td><input type="text" name="password" size="20" class="text"></td>
+      </tr>
+      <tr>
+        <td colspan="2" style="text-align: center"><input type="submit" value="Register"></td><td colspan="2" style="text-align: center"><input type="reset" value="Start Over"></td>
+      </tr>
+    </table>
+  </form>
+</article>
+<script>
+  endPage();
+</script>

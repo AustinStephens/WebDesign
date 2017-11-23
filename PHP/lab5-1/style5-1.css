@@ -1,0 +1,62 @@
+aside {float: right;
+       width: 175px;
+       min-height: 50px;
+       background-color: #ff4900;
+       padding: 10px;
+       border-radius: 5px;
+       clear: both;}
+       
+article {width: 400px;
+         float: left;
+         text-align: center;}
+         
+body {background-color: #61d7a4;
+      font-family: arial;}
+      
+header {width: 300px;
+        height: 30px;
+        margin: auto;
+        margin-bottom: 20px;
+        background-color: #00af64;
+        text-align: center;
+        border-radius: 5px;}
+        
+h1 {line-height: 30px;}
+
+input {margin: 10px;}
+
+section {width: 600px;
+         min-height: 250px;
+         margin: auto;
+         background-color: #007241;
+         padding: 15px;
+         border-radius: 10px;
+         text-align: center;}
+         
+.button {background-color: #a62f00;
+         color: #ffffff;
+         font-size: 12pt;
+         padding; 5px;}
+         
+.text {width: 50px;
+       background-color: #ff7640;
+       font-size: 12pt;}
+       
+.dice1 {clear: left;
+        width: 50px;
+        text-align: center;
+        background-color: #ccffcc;
+        float: left;
+        margin: 2px;}
+        
+.dice2 {width: 50px;
+        text-align: center;
+        background-color: #ccffcc;
+        float: left;
+        margin: 2px;}
+        
+.total {width: 50px;
+        text-align: center;
+        background-color: #ffcccc;
+        float: right;
+        margin: 2px;}

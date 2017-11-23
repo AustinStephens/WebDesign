@@ -1,0 +1,77 @@
+<script>
+    var player = new Array(3);
+    var game1 = new Array(3);
+    var game2 = new Array(3);
+    var game3 = new Array(3);
+    
+    function startPage()
+    {
+      document.write("<!DOCTYPE html>");
+      document.write("<html>");
+      document.write("<head>");
+      document.write("<meta charset='utf-8'>");
+      document.write("<title>Austin Stephens</title>");
+      document.write("<link rel='stylesheet' href='style8-3.css'>");
+      document.write("</head>");
+      document.write("<body>");
+      document.write("<header>");
+      document.write("<h1>Bowling League Report</h1>");
+      document.write("</header>");
+      document.write("<section>");
+    }
+    
+    function endPage()
+    {
+      document.write("</section>");
+      document.write("</body>");
+      document.write("</html>");
+    }
+    
+    function getPlayers()
+    {
+      for(i = 0; i < 3; i++)
+      {
+        player[i] = prompt("Enter Player Name", "");
+      }
+    }
+    
+    function getScores()
+    {
+      for(i = 0; i < 3; i++)
+      {
+        game1[i] = prompt("Game 1 score for " + player[i], "");
+      }
+      for(i = 0; i < 3; i++)
+      {
+        game2[i] = prompt("Game 2 score for " + player[i], "");
+      }
+      for(i = 0; i < 3; i++)
+      {
+        game3[i] = prompt("Game 3 score for " + player[i], "");
+      }
+    }
+    
+    function showReport()
+    {
+      startPage();
+      document.write("<table>");
+      document.write("<tr>");
+      document.write("<th>Player</th><th>Game 1</th><th>Game 2</th><th>Game 3</th>");
+      document.write("</tr>");
+      for(i = 0; i < 3; i++)
+      {
+        document.write("<tr><td>" + player[i] + "</td><td>" + game1[i] + "</td><td>" + game2[i] + "</td><td>" + game3[i] + "</td></tr>");
+      }
+      document.write("</table>");
+      endPage();
+    }
+    startPage();
+</script>
+    <form>
+      <input type="button" onclick="getPlayers()" value="Enter Players" class="button">
+      <input type="button" onclick="getScores()" value="Enter Scores" class="button">
+      <input type="button" onclick="showReport()" value="Report" class="button">
+    </form>
+<script>
+  endPage();
+</script>

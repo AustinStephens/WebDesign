@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Austin Stephens</title>
+  <style>
+    body {background-color: #ffffcc;}
+    
+    canvas {background-color: #ffffff;
+            border: solid #000000 1px;}
+            
+    section {width: 500px;
+             height: 500px;
+             margin: auto;}
+  </style>
+  <script>
+    function draw()
+    {
+      var canvas1 = document.getElementById("canvas1");
+      var ctx1 = canvas1.getContext("2d");
+      
+      //Front Base
+      ctx1.fillStyle="#ff0000";
+      ctx1.fillRect(60,100,200,150);
+      
+      //Font Bumper
+      ctx1.fillRect(45,200,15,50);
+      
+      //Front Chimney
+      ctx1.fillRect(75,40,40,60);
+      
+      //Front Top
+      ctx1.fillRect(180,70,80,30);
+      
+      //Connector
+      ctx1.fillRect(260,200,50,35);
+      
+      //Trailer
+      ctx1.fillRect(310,130,200,120);
+      
+      //Wheels
+      ctx1.fillStyle="#cccccc";
+      ctx1.beginPath();
+      ctx1.arc(100,250,35,0,Math.PI * 2, true);
+      ctx1.closePath();
+      ctx1.fill();
+      
+      //Second Wheel
+      ctx1.beginPath();
+      ctx1.arc(210,250,35,0,Math.PI * 2, true);
+      ctx1.closePath();
+      ctx1.fill();
+      
+      //Third Wheel
+      ctx1.beginPath();
+      ctx1.arc(360,250,35,0,Math.PI * 2, true);
+      ctx1.closePath();
+      ctx1.fill();
+      
+      //Fourth Wheel
+      ctx1.beginPath();
+      ctx1.arc(460,250,35,0,Math.PI * 2, true);
+      ctx1.closePath();
+      ctx1.fill();
+    }
+  </script>
+</head>
+<body onload="draw()">
+  <section>
+    <canvas width="700" height="500" id="canvas1">
+    </canvas>
+  </section>
+</body>
+</html>

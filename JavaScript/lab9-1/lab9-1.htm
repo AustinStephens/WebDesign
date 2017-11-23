@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Austin Stephens</title>
+  <style>
+    body {background-color: #ffffcc;}
+    
+    canvas {background-color: #ffffff;
+            border: solid #000000 1px;}
+            
+    section {width: 300px;
+             height: 300px;
+             margin: auto;}
+  </style>
+  <script>
+    function draw()
+    {
+      var canvas = document.getElementById("canvas1");
+      var ctx1 = canvas.getContext("2d");
+      
+      //Red Outside
+      ctx1.fillStyle="#ffcccc";
+      ctx1.fillRect(75,75,150,150);
+      
+      //Green Middle
+      ctx1.fillStyle="#ccffcc";
+      ctx1.fillRect(100,100,100,100);
+      
+      //Blue Inside
+      ctx1.fillStyle="#ccccff";
+      ctx1.fillRect(125,125,50,50);
+    }
+  </script>
+</head>
+<body onload="draw()">
+  <section>
+    <canvas width="300" height="300" id="canvas1">
+    </canvas>
+  </section>
+</body>
+</html>

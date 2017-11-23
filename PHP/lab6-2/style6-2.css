@@ -1,0 +1,65 @@
+body {background-color: #1d7373;
+      font-family: arial;}
+      
+header {width: 500px;
+         height: 40px;
+         margin: auto;
+         margin-bottom: 15px;
+         background-color: #ff7400;
+         border-radius: 50px;
+         text-align: center;}
+        
+h1 {line-height: 40px;}
+
+section {width: 800px;
+          margin: auto;
+          min-height: 300px;}
+          
+article {width: 500px;
+          min-height: 300px;
+          float: left;
+          padding: 10px;
+          background-color: #ffffff;
+          border-radius: 10px;
+          overflow: auto;}
+          
+div {margin-top: 10px;}
+
+#entry {width: 500px;
+        height: 300px;
+        margin: auto;
+        background-color: #ffb273;
+        text-align: center;
+        padding: 10px;
+        border-radius: 10px;}
+        
+#login {width: 200px;
+        height: 150px;
+        float: right;
+        background-color: #ffb273;
+        padding: 10px;
+        text-align: center;}
+        
+.journal {width: 475px;
+          min-height: 50px;
+          margin: auto;
+          margin-top: 10px;
+          border-radius: 5px;
+          background-color: #5ccccc;
+          padding: 5px;}
+          
+.journalTitle {font-size: 14pt; font-weight: bold;}
+
+.journalDate {font-weight: bold;}
+
+.text {background-color: #5ccccc;
+       padding: 3px;
+       border-radius: 5px;
+       border: solid #a64b00 1px;
+       font-family: arial;}
+       
+.button {background-color: #006363;
+         padding: 3px;
+         border-radius: 3px;
+         color: #ffffff;
+         border: solid #a64b00 1px;}

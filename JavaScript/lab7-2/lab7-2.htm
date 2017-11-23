@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Austin Stephens</title>
+  <style>
+    body {background-color: #336699;
+          font-family: arial;}
+          
+    header {width: 500px;
+            height: 50px;
+            margin: auto;
+            margin-bottom: 10px;
+            background-color: #26527c;
+            color: #ffffff;
+            text-align: center;
+            border-radius: 10px;
+            border: solid #000000 1px;}
+            
+    h1 {line-height: 10px;}
+    
+    article {width: 500px;
+             min-height: 150px;
+             margin: auto;
+             background-color: #ccccff;
+             padding: 5px;
+             font-size: 14pt;
+             text-align: center;
+             color: #000000;
+             border-radius: 10px;
+             border: solid #000000 1px;}
+  </style>
+  <script>
+    var quotes = new Array(10);
+    quotes[0] = "We are all inventors, each sailing out on a voyage of discovery, guided each by a private chart, of which there is no duplicate. The world is all gates, all opportunities. - Emerson"; 
+    quotes[1] = "You can fool all the people some of the time, and some of the people all the time, but you cannot fool all the people all the time. - Abraham Lincoln";
+    quotes[2] = "Do not follow where the path may lead. Go instead where there is no path and leave a trail. - McAlindon";
+    quotes[3] = "We hold these truths to be self-evident: that all men are created equal; that they are endowed by their Creator with certain unalienable rights; that among these are life, liberty, and the pursuit of happiness - Thomas Jefferson";
+    quotes[4] = "It is better to keep your mouth clsoed and let people think you are a fool than to open it and remove all doubt - Mark Twain";
+    quotes[5] = "Time is free, but it's priceless. You can't own it, but you can use it. You can't keep it, but you can send it. Once you've lost it, you can never get it back. - Harvey Mackay";
+    quotes[6] = "Aesop, the ancient storyteller, told this fable: Once upon a time, a donkey found a lion's skin. He tried it on, strutted around, and frightened many animals. Soon a fox came along, and the donkey tried to scare him, too. But the fox, hearing the donkey's voice, said, If you want to terrify me, you'll have to disguise your bray. Aesop's moral: Clothes may disguise a fool, but his words will give him away.";
+    quotes[7] = "If you don't design your own life plan, chances are you'll fall into someone else's plan. And guess what they have planned for you? Not much. - John Rohn";
+    quotes[8] = "Learn from yesterday, live for today, hope for tomorrow. The important thing is not to stop questioning. - Albert Einstein";
+    quotes[9] = "Freedom is never more than one generation away from extinction. We didn't pass it to our children in the bloodstream. It must be fought for, protected, and handed on for them to do the same. - Ronald Reagan";
+
+    function getQuote()
+    {
+      var x;
+      x = Math.random() * 10;
+      x = Math.floor(x);
+      return x;
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Inspirational Quotes</h1>
+  </header>
+  <article>
+    <script>
+      var myQuote = getQuote();
+      document.write(quotes[myQuote]);
+    </script>
+  </article>
+</body>
+</html>

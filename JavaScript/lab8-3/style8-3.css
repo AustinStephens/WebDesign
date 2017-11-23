@@ -1,0 +1,36 @@
+body {background-color: #ffffcc;
+          font-family: arial;}
+          
+    header {width: 400px;
+            height: 50px;
+            margin: auto;
+            margin-bottom: 15px;
+            background-color: #62d99c;
+            border-radius: 10px;
+            text-align: center;}
+    
+    h1 {line-height: 50px;}
+    
+    section {width: 400px;
+             min-height: 100px;
+             margin: auto;
+             background-color: #bf5230;
+             padding: 15px;
+             text-align: center;
+             border-radius: 5px;
+             border: solid #000000 3px;}
+             
+    td {background-color: #62d99c;
+        text-align: center;}
+        
+    th {width: 100px;
+        background-color: #228653;
+        color: #62d99c;}
+        
+    .button {background-color: #007439;
+             padding: 10px;
+             margin: 10px;
+             border-radius: 5px;
+             font-size: 12pt;
+             color: #ffffff;
+             border: solid #000000 1px;}

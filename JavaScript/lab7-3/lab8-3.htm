@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Austin Stephens</title>
+  <style>
+    body {background-color: #ccffff;
+          font-family: arial;}
+          
+    aside {width: 400px;
+           height: 400px;
+           margin: auto;
+           background-image: url(8ball.jpg);}
+           
+    header {width: 400px;
+            height: 50px;
+            margin: auto;
+            margin-bottom: 15px;
+            background-color: #006363;
+            text-align: center;
+            color: #5ccccc;
+            border-radius: 10px;}
+            
+    h1 {line-height: 50px;}
+    
+    section {text-align: center;}
+    
+    textarea {margin-top: 170px;
+              background-color: #000000;
+              color: #ffffff;
+              font-family: arial;
+              font-size: 14pt;
+              text-align: center;
+              overflow: auto;
+              border: solid #000000 1px;}
+              
+    .button {background-color: #ff7400;
+             color: #ffffff;
+             padding: 10px;
+             border-radius: 5px;
+             border: solid #000000 1px;}
+             
+    .text {width: 400px;
+           background-color: #ffffcc;
+           padding: 5px;
+           border-radius: 5px;
+           border: solid #000000 1px;}
+  </style>
+  <script>   
+      var answers = new Array(20);
+      answers[0] = "Signs point to yes";
+      answers[1] = "Yes";
+      answers[2] = "Reply hazy, try again";
+      answers[3] = "Without a doubt";
+      answers[4] = "My sources say yes";
+      answers[5] = "As I see it, yes";
+      answers[6] = "You  may rely on it";
+      answers[7] = "Concentrate and ask again";
+      answers[8] = "Outlook not so good";
+      answers[9] = "It is decidedly so";
+      answers[10] = "Better not tell you now";
+      answers[11] = "Very doubtful";
+      answers[12] = "Yes definitely";
+      answers[13] = "It is certain";
+      answers[14] = "Cannot predict now";
+      answers[15] = "Most likely";
+      answers[16] = "Ask again later";
+      answers[17] = "My reply is no";
+      answers[18] = "Outlook good";
+      answers[19] = "Dont count on it";
+
+    function ask(form)
+    {
+      var x = Math.random() * 20;
+      x = Math.floor(x);
+      form.answer.value= answers[x];
+      form.question.value="";
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Magic 8 Ball</h1>
+  </header>
+  <section>
+    <form name="ball">
+      <input type="text" name="question" placeholder="Ask your question here" class="text">
+      <aside>
+        <textarea rows="3" cols="15" name="answer" disabled="true"></textarea>
+      </aside>
+      <input type="button" onclick="ask(this.form)" class="button" value="Ask 8 Ball">
+    </form>
+  </section>
+</body>
+</html>

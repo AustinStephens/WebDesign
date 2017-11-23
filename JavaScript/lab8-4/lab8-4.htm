@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Austin Stephens</title>
+  <style>
+    body {background-color: #ffe773;
+          font-family: arial;}
+          
+    header {width: 500px;
+            height: 50px;
+            margin: auto;
+            margin-bottom: 15px;
+            background-color: #ff7400;
+            text-align: center;
+            border-radius: 10px;
+            border: solid #000000 3px;}
+            
+    h1 {line-height: 10px;}
+    
+    section {width: 300px;
+             height: 250px;
+             margin: auto;
+             background-color: #bf8f30;
+             padding: 10px;
+             border-radius: 10px;}
+             
+    td {text-align: left;}
+    
+    .button {background-color: #ffd300;
+             font-size: 12pt;
+             padding: 10px;
+             margin: 15px;
+             border-radius: 5px;
+             border: solid #000000 1px;}
+             
+    .text {background-color: #bf8f30;
+           border: solid #000000 1px;
+           font-size: 14pt;
+           width: 75px;}
+           
+    .guess {background-color: #ffb273;
+            width: 50px;
+            border: solid #a66f00 1px;
+            border-radius: 5px;
+            padding: 5px;}
+  </style>
+  <script>
+    var num = 0;
+    
+    function play(form)
+    {
+      var player = eval(form.guess.value);
+      
+      if(player == num)
+      {
+        form.number.value=num;
+        alert("You Win!");
+        form.clue.value="WINNER!";
+      }
+      else if(player < num)
+      {
+        form.clue.value="Higher";
+      }
+      else if(player > num)
+      { 
+        form.clue.value="Lower";
+      }
+      form.guess.value="";
+    }
+    
+    function newGame()
+    {
+      document.secret.clue.value = "";
+      document.secret.guess.value = "";
+      document.secret.number.value = "??";
+      num = Math.random() * 100;
+      num = Math.floor(num);
+    }
+  </script>
+</head>
+<body onload="newGame()">
+  <header>
+    <h1>Secret Number Game</h1>
+  </header>
+  <section>
+    <form name="secret">
+      <table>
+        <tr>
+          <td>Clue</td><td><input type="text" name="clue" class="text"></td>
+        </tr>
+        <tr>
+          <td>Secret Number</td><td><input type="text" name="number" class="text"></td>
+        </tr>
+        <tr>
+          <td>Your Guess</td><td><input type="text" name="guess" class="guess" autofocus></td>
+        </tr>
+        <tr>
+          <td><input type="button" onclick="newGame()" value="New Game" class="button"></td><td><input type="button" onclick="play(this.form)" value="Guess" class="button"></td>
+        </tr>
+      </table>
+    </form>
+  </section>
+</body>
+</html>

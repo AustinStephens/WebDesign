@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Austin Stephens</title>
+  <style>
+    body {background-color: #64df85;
+          font-family: arial;}
+          
+    header {width: 500px;
+            height: 50px;
+            margin: auto;
+            margin-bottom: 15px;
+            background-color: #04819e;
+            color: #ffffff;
+            text-align: center;
+            border-radius: 5px;}
+            
+    h1 {line-height: 50px;}
+    
+    section {width: 500px;
+             height: 200px;
+             margin: auto;
+             background-color: #007c21;
+             color: #ffffff;
+             padding: 10px;
+             border-radius: 10px;
+             border: solid #000000 2px;}
+             
+    .bet {background-color: #ffffcc;
+          font-size: 12pt;
+          border-radius: 5px;
+          border: solid #ffffcc 1px;}
+          
+    .text {background-color: #38df64;
+           font-size: 12pt;
+           border-radius: 5px;
+           border: solid #38df64 1px;}
+           
+    .button {background-color: #60b9ce;
+             padding: 10px;
+             margin: 5px;
+             border-radius: 5px;
+             border: solid #000000 1px;}
+  </style>
+  <script>
+    var show;
+    var hidden;
+    var player;
+    var i;
+    
+    function newGame()
+    {
+      document.table.show.disabled = true;
+      document.table.hide.disabled = true;
+      document.table.plyr.disabled = true;
+      document.table.bank.disabled = true;
+      player = 0;
+      show = 0;
+      document.table.plyr.value="";
+      hidden = Math.random() * 10 + 1;
+      hidden = Math.floor(hidden);
+      while(show + hidden <= 16)
+      {
+        i = Math.random() * 10 + 1;
+        show = show + Math.floor(i);
+      }
+      document.table.show.value = show;
+      document.table.hide.value = "Face Down Card";
+    }
+    
+    function stand()
+    {
+      var bet = document.table.bet.value;
+      bet = eval(bet);
+      var bnk = document.table.bank.value;
+      bnk = eval(bnk);
+      if(player > 21)
+      {
+        document.table.hide.value = hidden;
+        window.alert("Player Busted");
+        bnk = bnk - bet;
+      }
+      else if(show + hidden > 21)
+      {
+        document.table.hide.value = hidden;
+        window.alert("Dealer Busted");
+        bnk = bnk + bet;
+      }
+      else if(player >= show + hidden)
+      {
+        document.table.hide.value = hidden;
+        window.alert("Player Wins!");
+        bnk = bnk + bet;
+      }
+      else
+      {
+        document.table.hide.value = hidden;
+        window.alert("Dealer Wins!");
+        bnk = bnk - bet;
+      }
+      document.table.bank.value = bnk;
+      document.table.bet.value = 20;
+      newGame();
+    }
+    
+    function draw()
+    {
+      if(player<21)
+      {
+        i = Math.random() * 10 + 1;
+        player = player + Math.floor(i);
+      }
+      else
+      {
+        window.alert("You Must Stand");
+      }
+      document.table.plyr.value = player;
+    }
+  </script>
+</head>
+<body onload="newGame()">
+  <header>
+    <h1>Blackjack Table</h1>
+  </header>
+  <section> 
+    <form name="table">
+      <table>
+        <tr>
+          <td rowspan="2"><img src="table.gif"></td><td>Dealer's Cards</td><td><input type="text" name="show" size="5" class="text"></td><td><input type="text" name="hide" class="text"></td>
+        </tr>
+        <tr>
+          <td>Player's Cards</td><td><input type="text" size="5" class="text" name="plyr"></td><td>Bet: <input type="text" size="5" name="bet" value="20" class="bet"></td>
+        </tr>
+        <tr>
+          <td colspan="4"><input type="button" value="Stand" onclick="stand()" class="button"><input type="button" value="Draw Card" onclick="draw()" class="button">Bank:<input type="text" class="text" name="bank" size="10" value="500"></td>
+        </tr>
+      </table>
+    </form>
+  </section>
+</body>
+</html>

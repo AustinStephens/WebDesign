@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Austin Stephens</title>
+  <style>
+    body {background-color: #bf8f30;
+          font-family: arial;}
+          
+    header {width: 500px;
+            height: 50px;
+            margin: auto;
+            margin-bottom: 20px;
+            background-color: #ffd073;
+            text-align: center;
+            border-radius: 10px;}
+            
+    h1 {line-height: 50px;}
+    
+    section {width: 200px;
+             min-height: 200px;
+             margin: auto;
+             background-color: #ffd073;
+             padding: 15px;
+             border-radius: 10px;}
+  </style>
+  <script>
+  function runCounter()
+  {
+     var repeat = 100;
+     var counter = 0;
+     document.write("<table>");
+     while (counter < repeat)
+     {
+        document.write("<tr><td> counter = </td><td>");
+        document.write(counter);
+        document.write("</td></tr>");
+        counter++;
+     }
+     document.write("</table>");
+  }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>While Loop Counter</h1>
+  </header>
+  <section>
+    <script>runCounter();</script>
+  </section>
+</body>
+</html>

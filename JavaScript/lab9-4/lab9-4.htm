@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Austin Stephens</title>
+  <style>
+    body {background-color: #ffffcc;}
+    
+    canvas {background: #ffffff;
+            border: solid #000000 1px;}
+            
+    section {width: 500px;
+             height: 500px;
+             margin: auto;}
+  </style>
+  <script>
+    function draw()
+    {
+      
+      var canvas1 = document.getElementById("canvas1");
+      var ctx1 = canvas1.getContext("2d");
+      
+      //Back of Cube
+      ctx1.fillStyle="rgba(225,50,50,0.5)";
+      ctx1.fillRect(150,150,250,250);
+      ctx1.strokeRect(150,150,250,250);
+      
+      //Color setting for sides
+      ctx1.fillStyle="rgba(255,255,50,0.5)";
+      
+      //left side
+      ctx1.beginPath();
+      ctx1.moveTo(150,150);
+      ctx1.lineTo(225,225);
+      ctx1.lineTo(225,475);
+      ctx1.lineTo(150,400);
+      ctx1.closePath();
+      ctx1.fill();
+      ctx1.stroke();
+      
+      //top side
+      ctx1.beginPath();
+      ctx1.moveTo(150,150);
+      ctx1.lineTo(400,150);
+      ctx1.lineTo(475,225);
+      ctx1.lineTo(225,225);
+      ctx1.closePath();
+      ctx1.fill();
+      ctx1.stroke();
+      
+      //right side
+      ctx1.beginPath();
+      ctx1.moveTo(400,150);
+      ctx1.lineTo(475,225);
+      ctx1.lineTo(475,475);
+      ctx1.lineTo(400,400);
+      ctx1.closePath();
+      ctx1.fill();
+      ctx1.stroke();
+      
+      //bottom
+      ctx1.beginPath();
+      ctx1.moveTo(150,400);
+      ctx1.lineTo(225,475);
+      ctx1.lineTo(475,475);
+      ctx1.lineTo(400,400);
+      ctx1.closePath();
+      ctx1.fill();
+      ctx1.stroke();
+      
+      //front
+      ctx1.fillStyle="rgba(225,50,50,0.5)";
+      ctx1.fillRect(225,225,250,250);
+      ctx1.strokeRect(225,225,250,250);
+    }
+  </script>
+</head>
+<body onload="draw()">
+  <section>
+    <canvas width="500" height="500" id="canvas1">
+    </canvas>
+  </section>
+</body>
+</html>
